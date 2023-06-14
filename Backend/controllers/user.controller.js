@@ -6,10 +6,14 @@ require("dotenv").config();
 
 // io-redis setup
 const client = new Redis({
-  port: 12271,
-  host: "redis-12271.c278.us-east-1-4.ec2.cloud.redislabs.com", //----
-  password: "i4fkCzI6Taicc6DV0xpDmJPbBrT6AVXb", //----
+  port: 10362,
+  host: "redis-10362.c264.ap-south-1-1.ec2.cloud.redislabs.com", //----
+  password: "jrAD8AzZjLomuBMPyuF4nz0rUG4hg1Kg", //----
 });
+
+// redis-10362.c264.ap-south-1-1.ec2.cloud.redislabs.com:10362
+
+// jrAD8AzZjLomuBMPyuF4nz0rUG4hg1Kg
 
 client.on("connect", () => {
   console.log("Connected to Redis Cloud");
@@ -19,8 +23,8 @@ client.on("error", (err) => {
   console.error("Error connecting to Redis Cloud:", err);
 });
 
-// let sgMail = require("@sendgrid/mail");
-// sgMail.setApiKey(process.env.SENDGRID_KEY); //----
+let sgMail = require("@sendgrid/mail");
+sgMail.setApiKey(process.env.SENDGRID_KEY);
 
 // register user/ signup user
 const registerNewUser = async (req, res) => {
@@ -168,7 +172,7 @@ const getotp = async (req, res) => {
   console.log(email);
   const msg = {
     to: email,
-    from: "xxxxxxxxxxxxxxxxx@gmail.com", //-----
+    from: "raghavendradj842@gmail.com", //-----
     subject: "Your OTP for Password Change",
     text: `Hi!, welcome to GLAMHUB!`,
     html: `<h2>Hello User</h2>
