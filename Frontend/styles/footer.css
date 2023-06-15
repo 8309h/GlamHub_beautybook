@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope&family=Montserrat:wght@600&family=Poppins&family=Quicksand&display=swap');
+
+
+*{
+    font-family: montserrat, poppins;
+    text-decoration: none;
+}
+footer{
+    background-color: black;
+    /* position: relative; */
+    /* top: 100px; */
+    padding-top: 50px;
+    color: white
+}
+#footer-logo {
+    width: 80%;
+    margin: auto;
+    border-bottom: 1px solid gray;
+    border-top: 1px solid gray;
+    margin-bottom: 30px;
+
+}
+#footer-one{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    justify-content: space-between;
+
+}
+#footer-one a {
+    text-decoration: none;
+    color: white;
+
+}
+#footer-one a:hover {
+    color: pink;
+    transform: rotate(10);
+}
+#footer-two h3,p:hover {
+    color: pink;
+    /* transform: rotate(10); */
+
+}
+
+@media screen and (max-width:700px){
+    #navbar{
+        flex-direction: column;
+
+    }
+}
+@media screen and (max-width:450px){
+    #navbar{
+        flex-direction: column;
+        
+    }
+    #info {
+        flex-direction: column;
+    }
+}
