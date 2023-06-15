@@ -5,27 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>navbar</title>
-    <style>
-
-@import url('https://fonts.googleapis.com/css2?family=Manrope&family=Montserrat:wght@600&family=Poppins&family=Quicksand&display=swap');
-        #navbar{
-            background-color: black;
-            color: white;
-            font-family: font-family, montserrat, poppins;
-
-        }
-
-    </style>
+    <link rel="stylesheet" href="../styles/navbar.css">
+    
 </head>
 <body>
-    <div id="navbar">
-        <div><img src="" alt="logo"></div>
-        <div id="Loginuser-name"></div>
-        <li>
-            <ul>Login</ul>
-            <ul>Sign-Up</ul>
-        </li>
-    </div>
+    <nav id="navbar">
+        <div id="logo"><img src="../logo_glam.png" alt="logo">
+        <p>GLAM <span style="color: palevioletred;">HUB</span></p></div>
+        
+        <div id="info">
+            <div id="Loginuser-name">Loged username</div>
+            <button id="login">Login</button>
+            <button id="signup">Signup</button>
+
+        </div>
+       
+    </nav>
     
 </body>
 </html>
+<script>
+    // import navbar into index.html
+    const nav = document.getElementById("navbar");
+    nav.classList.toggle("active");
+    let loginbtn = document.querySelector("#login")
+    let signupbtn = document.querySelector("#signup")
+    console.log(nav)
+    function toggleNav(){
+        nav.classList.toggle("active");
+    }
+    loginbtn.addEventListener("click",toggleNav)
+    signupbtn.addEventListener("click",toggleNav)
+
+</script>
