@@ -18,7 +18,7 @@ body{
     font-family: montserrat, poppins;
     margin: 0px;
     padding: 0px;
-    background-image: url(../assets/bg2.jpg);
+    background-image: url(../images/lfrs2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -40,16 +40,13 @@ body>img{
     display: flex;
     align-items:center;
     justify-content: center;
-    /* padding:-10px 0px -10px 0px  !important; */
     font-size: 1.3rem;
-    /* border: 1px solid red; */
     font-family: montserrat, poppins;
-    /* margin-top: -10% ; */
     height: 80px;
+    margin-top: -10px !important
 }
 
 #logo img{
-    /* margin-left: ; */
     width:25%;
     /* border: 1px solid red; */
 }
@@ -68,7 +65,7 @@ body>img{
 
 #left{
     margin: auto;
-    margin-top: 70px;
+    margin-top: 50px;
     width: 100%;
 }
 
@@ -81,8 +78,8 @@ body>img{
 
 #leftmaincont{
     color: rgb(0, 0, 0);
-    background: rgba(255,255,255,0.1);
-    backdrop-filter: blur(15px);
+    /* background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(15px); */
     border-radius: 10px;
     overflow: hidden;
     transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -98,6 +95,8 @@ body>img{
     padding-bottom: 0px;
     margin: auto;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: white;
+    border: none;
 }
 
 
@@ -186,6 +185,7 @@ form{
     align-items: center;
     background-color: rgba(255,102,196,255);
     font-family: montserrat;
+    border: 0px;
 }
 
 #gbtn:hover{

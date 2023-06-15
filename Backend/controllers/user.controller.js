@@ -2,18 +2,13 @@ const { UserModel } = require("../models/user.model");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 let { Redis } = require("ioredis");
-require("dotenv").config();
 
 // io-redis setup
 const client = new Redis({
   port: 10362,
-  host: "redis-10362.c264.ap-south-1-1.ec2.cloud.redislabs.com", //----
-  password: "jrAD8AzZjLomuBMPyuF4nz0rUG4hg1Kg", //----
+  host: "redis-10362.c264.ap-south-1-1.ec2.cloud.redislabs.com",
+  password: "jrAD8AzZjLomuBMPyuF4nz0rUG4hg1Kg",
 });
-
-// redis-10362.c264.ap-south-1-1.ec2.cloud.redislabs.com:10362
-
-// jrAD8AzZjLomuBMPyuF4nz0rUG4hg1Kg
 
 client.on("connect", () => {
   console.log("Connected to Redis Cloud");
@@ -23,6 +18,7 @@ client.on("error", (err) => {
   console.error("Error connecting to Redis Cloud:", err);
 });
 
+require("dotenv").config();
 let sgMail = require("@sendgrid/mail");
 sgMail.setApiKey(process.env.SENDGRID_KEY);
 
@@ -172,7 +168,7 @@ const getotp = async (req, res) => {
   console.log(email);
   const msg = {
     to: email,
-    from: "raghavendradj842@gmail.com", //-----
+    from: "raghavendradj842@gmail.com",
     subject: "Your OTP for Password Change",
     text: `Hi!, welcome to GLAMHUB!`,
     html: `<h2>Hello User</h2>
@@ -187,13 +183,13 @@ const getotp = async (req, res) => {
   try {
     await sgMail.send(msg);
 
-    Swal.fire({
-      position: "centre",
-      icon: "success",
-      title: "OTP sent Successfully.",
-      showConfirmButton: false,
-      timer: 1500,
-    });
+    // Swal.fire({
+    //   position: "centre",
+    //   icon: "success",
+    //   title: "OTP sent Successfully.",
+    //   showConfirmButton: false,
+    //   timer: 1500,
+    // });
 
     console.log("OTP sending successful");
     console.log("Received OTP value: ", otp);

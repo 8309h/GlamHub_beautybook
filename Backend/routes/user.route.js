@@ -7,9 +7,9 @@ const {
   verifyotp,
   resetpassword,
 } = require("../controllers/user.controller");
-const { passport } = require("../config/google_oauth"); //-----
+const { passport } = require("../config/google_oauth");
 const { UserModel } = require("../models/user.model");
-const { auth } = require("../middlewares/auth"); //----
+const { auth } = require("../middlewares/auth");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const path = require("path");
@@ -24,56 +24,56 @@ userRouter.post("/getotp", getotp);
 userRouter.post("/verifyotp", verifyotp);
 userRouter.post("/resetpassword", resetpassword);
 
-// userRouter.get(
-//   "/auth/google",
-//   passport.authenticate("google", { scope: ["profile", "email"] })
-// );
+userRouter.get(
+  "/auth/google",
+  passport.authenticate("google", { scope: ["profile", "email"] })
+);
 
-// userRouter.get(
-//   "/auth/google/callback",
-//   passport.authenticate("google", {
-//     failureRedirect: "/login",
-//     session: false,
-//   }),
-//   async function (req, res) {
-//     const fetch_user = await UserModel.findOne({ email: req.user.email });
-//     if (fetch_user) {
-//       token_Genretor(res, fetch_user._id);
+userRouter.get(
+  "/auth/google/callback",
+  passport.authenticate("google", {
+    failureRedirect: "/login",
+    session: false,
+  }),
+  async function (req, res) {
+    const fetch_user = await UserModel.findOne({ email: req.user.email });
+    if (fetch_user) {
+      token_Genretor(res, fetch_user._id);
 
-//       // res.redirect("./../../Frontend/leaderboard.html")
-//     } else {
-//       console.log(req.user);
-//       req.user.password = bcrypt.hashSync(req.user.password, 2);
-//       // req.user.avatar = fetch_user.avtar;
-//       const user = new UserModel(req.user);
-//       await user.save();
-//       token_Genretor(res, req.user.name, "login with google");
-//       // res.redirect("./../../Frontend/leaderboard.html")
-//     }
-//   }
-// );
+      // res.redirect("./../../Frontend/leaderboard.html")
+    } else {
+      console.log(req.user);
+      req.user.password = bcrypt.hashSync(req.user.password, 2);
+      // req.user.avatar = fetch_user.avtar;
+      const user = new UserModel(req.user);
+      await user.save();
+      token_Genretor(res, req.user.name, "login with google");
+      // res.redirect("./../../Frontend/leaderboard.html")
+    }
+  }
+);
 
-// function token_Genretor(res, id) {
-//   let accessToken = jwt.sign(
-//     { userId: id },
-//     process.env.JWT_ACCESS_TOKEN_SECRET_KEY,
-//     { expiresIn: 60 * 60 * 24 }
-//   );
-//   let refreshToken = jwt.sign(
-//     { userId: id },
-//     process.env.JWT_REFRESH_TOKEN_SECRET_KEY,
-//     { expiresIn: 60 * 60 * 24 * 4 }
-//   );
+function token_Genretor(res, id) {
+  let accessToken = jwt.sign(
+    { userId: id },
+    process.env.JWT_ACCESS_TOKEN_SECRET_KEY,
+    { expiresIn: 60 * 60 * 24 }
+  );
+  let refreshToken = jwt.sign(
+    { userId: id },
+    process.env.JWT_REFRESH_TOKEN_SECRET_KEY,
+    { expiresIn: 60 * 60 * 24 * 4 }
+  );
 
-//   res.cookie("JAA_access_token", accessToken, { maxAge: 60 * 60 * 24 });
-//   res.cookie("JAA_refresh_token", refreshToken, {
-//     maxAge: 60 * 60 * 24 * 4,
-//   });
+  res.cookie("JAA_access_token", accessToken, { maxAge: 60 * 60 * 24 });
+  res.cookie("JAA_refresh_token", refreshToken, {
+    maxAge: 60 * 60 * 24 * 4,
+  });
 
-//   // navigate to the "frontend/leaderboard" directory
-//   const targetDirectory = path.join(__dirname, "../../Frontend/lobby.html"); //----
-//   res.set("Content-Type", "text/html");
-//   res.sendFile(targetDirectory);
-// }
+  // navigate to the "frontend/leaderboard" directory
+  const targetDirectory = path.join(__dirname, "../../Frontend/index.html");
+  res.set("Content-Type", "text/html");
+  res.sendFile(targetDirectory);
+}
 
 module.exports = { userRouter };
