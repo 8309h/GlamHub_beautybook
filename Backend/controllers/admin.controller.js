@@ -47,14 +47,18 @@ const getAllSalon = async (req,res)=>{
 
 //Update a salon's details
 const updateSalonDetails = async (req,res)=>{
-    let {name}=req.body
+    let {_id}=req.body
 
     try {
-        const salonInfo= await SalonModel.findOneAndUpdate({name},{...req.body})
+        const salonInfo= await SalonModel.findByIdAndUpdate(_id,{...req.body})
         res.send("Updated the details successfully!")
     } catch (error) {
         res.status(400).send({msg:"couldn't retrive data"})
     }
+}
+
+const loginAdmin = async (req,res)=>{
+  let {email,password,key}=req.body
 }
 
 
