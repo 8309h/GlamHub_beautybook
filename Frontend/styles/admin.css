@@ -1,5 +1,8 @@
 *{
     margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 .navbar-brand>img{
@@ -212,27 +215,60 @@
     padding:1rem;
   }
   #readbox>div{
-    border: 2px solid red;
     width:100%;
     height:100%;
     overflow-y: scroll;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
   }
 
   #resultsBox{
-    display: grid;
-    background-color: #d982ff;
-    grid-template-columns: repeat(2,1fr);
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:2rem;
+    padding:1rem;
   }
 
   #resultsBox>div{
-    border: 2px solid red;
-    /* width: 100%; */
-    /* display: flex;
-    justify-content: space-between;
+    width: 100%;
+    display: flex;
+    justify-content:center;
     align-items: center;
-    flex-direction: column; */
+    flex-direction: column;
     padding:.5rem;
+    border-radius:.4rem;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    transition:200ms;
+    height: fit-content;
   }
+
+  #resultsBox>div:hover{
+    transform:scale(1.01);
+  }
+
+  #resultsBox>div>img{
+    border-radius:1rem 1rem 0 0;
+    width:100%;
+  }
+
+
+/* updation form here */
+
+.modal {
+  display:none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 20% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+}

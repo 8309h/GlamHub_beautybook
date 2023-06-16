@@ -17,6 +17,7 @@ addBtn.addEventListener("click", () => {
         <form id="yourFormId">
             <h3>ADD NEW SALON</h3>
 
+            <input type="text" placeholder="Salon Image" id="salon_image" required>
             <input type="text" placeholder="Salon Name" id="salon_name" required>
             <input type="text" placeholder="Address" id="salon_address" required>
             <input type="number" placeholder="Contact" id="salon_number" required>
@@ -130,6 +131,7 @@ function showCheckboxes3() {
 }
 
 async function getSelectedValues(event) {
+    const salon_image = document.getElementById("salon_image");
     const salon_name = document.getElementById("salon_name");
     const salon_address = document.getElementById("salon_address");
     const salon_number = document.getElementById("salon_number");
@@ -160,6 +162,7 @@ async function getSelectedValues(event) {
     });
   
     let obj = {
+      image:salon_image.value,
       name: salon_name.value,
       address: salon_address.value,
       contact: salon_number.value,
@@ -195,8 +198,6 @@ async function getSelectedValues(event) {
 
 
 //Get all users data============================================================
-// const contentBox = document.getElementById("contentBox");
-// const readBtn = document.getElementById("readBtn");
 
 readBtn.addEventListener("click", () => {
   contentBox.innerHTML = "";
@@ -208,10 +209,12 @@ readBtn.addEventListener("click", () => {
         <button type="button" onclick="getSalons()">Search</button>
       </form>
       <div id="resultsBox">
-        search results
+        <h3>Loading...</h3>
       </div>
     </div>
   `;
+
+  getSalons()
   
 });
 
@@ -241,36 +244,63 @@ async function getSalons() {
 }
 
 function Display(arr, resultsBox) {
-  resultsBox.innerHTML = "";
+    resultsBox.innerHTML = "";
+  
+    arr.forEach((ele) => {
+      let html = `
+        <div>
+          <img src="https://media.istockphoto.com/id/134052142/photo/hair-salon-situation.jpg?s=612x612&w=0&k=20&c=HM4Tl3ATijpIS1Rv097UHwmZ3OfmqGXkniNLuTCqB0A=" />
+          <h3>${ele.name}</h3>
+          <p>${ele.address}</p>
+          <p>${ele.contact}</p>
+          <p>${ele.city}</p>
+          <button onclick="editform('${ele.name}','${ele.city}')">Edit</button>
+        </div>`;
+  
+      resultsBox.innerHTML += html;
+    });
+  }
+  
+  function editform(val1,val2) {
+    console.log(val1,val2)
+    const modal = document.getElementById("myModal");
+    modal.style.display = "block";
+  }
+  
+//from here updation part starts============================================
+// updateBtn.addEventListener("click",()=>{
+//     contentBox.innerHTML=""
 
-  arr.forEach((ele) => {
-    let html = `
-      <div>
-        <img src=${ele.image} />
-        <h1>${ele.name}</h1>
-        <p>${ele.address}</p>
-        <h4>${ele.contact}</h4>
-        <h3>${ele.city}</h3>
-      </div>`;
+//     contentBox.innerHTML=`
+//         <form>
+//         <h1>Update Info</h1>
+//         <input type="text" placeholder="Salon Name for Update" id="salon_name">
+//         <input type="text" placeholder="Salon Image" id="update_salon_image">
+//         <input type="text" placeholder="Address" id="update_salon_address">
+//         <input type="number" placeholder="Contact" id="update_salon_contact">
+//         <input type="text" placeholder="City" id="update_salon_city">
+//         <select id="update-services">
+//             <option disabled selected value="">Select Category</option>
+//             <option value="Hair">Hair</option>
+//             <option value="Body">Body</option>
+//             <option value="Face">Face</option>
+//         </select>
+//         <input type="text" placeholder="Service Name" id="update_service">
+//             <button onclick="updateSalon()">update</button>
+//         </form>
+//     `;
+// })
 
-    resultsBox.innerHTML += html;
-  });
-}
+// function updateSalon(){
+//     const salonName=document.getElementById("salon_name").value;
 
-
-updateBtn.addEventListener("click",()=>{
-    contentBox.innerHTML=""
-
-    contentBox.innerHTML=`
-        <form>
-            <input type="text" placeholder="Solan Name">
-            <input type="text" placeholder="Address">
-            <input type="text" placeholder="Contact no.">
-            <input type="text" placeholder="City">
-            <button>update</button>
-        </form>
-    `;
-})
+//     const update_salon_image=document.getElementById("update_salon_image")
+//     const update_salon_address=document.getElementById("update_salon_address")
+//     const update_salon_contact=document.getElementById("update_salon_contact")
+//     const update_salon_city=document.getElementById("update_salon_city")
+//     const service_category=document.getElementById("update-services");
+//     const service_value=document.
+// }
 
 deleteBtn.addEventListener("click",()=>{
     contentBox.innerHTML=""
