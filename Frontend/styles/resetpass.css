@@ -41,8 +41,6 @@ body>img{
 .row {
 
   background: rgba(255,255,255,0.1);
-  /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  backdrop-filter: blur(15px); */
   color: black;
   text-align: center;
   padding: 2em 2em 0.5em;
@@ -217,17 +215,31 @@ margin-bottom: 5px;
 
   @media screen and (max-width: 700px) {
     .row {
-      color: white;
-      background: rgba(255,255,255,0.2);
-      width: 300px !important;
+      width: 320px !important;
       border-radius: 10px;
     } 
+
+    #logo{
+      margin: auto; 
+      display: flex;
+      justify-content: center;
+      font-family: montserrat, poppins;
+  }
+  
+  .pinkhub{
+      font-size: 24px !important
+      }
+  
+  #logo h3{
+      font-size: 24px !important;
+  } 
+  
   body{
     background-color: black;
     background-image: none;
     background: rgb(22,21,21);
-    background: linear-gradient(180deg, rgba(22,21,21,0.9837184873949579) 0%, rgba(8,8,8,0.333858543417367) 48%, rgba(101,101,101,1) 98%);  
-}
+    background: linear-gradient(180deg, #ff90fdfb 0%, rgba(167, 167, 167, 0.334) 48%, #ff90e5 98%);  
+  }
   body>img{
       display: none;
   }

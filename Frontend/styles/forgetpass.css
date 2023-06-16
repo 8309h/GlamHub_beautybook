@@ -194,12 +194,6 @@ form>p{
           color:rgb(255, 255, 255);
           cursor:pointer;
         }
-
-
- /* .row .footer h5 {
-    margin-top: 1em; } */
-
-
   .row .footer p {
     margin-top: 2em; }
 
@@ -220,16 +214,29 @@ form>p{
 
 @media screen and (max-width: 700px) {
   .row {
-    color: white;
-    background: rgba(255,255,255,0.2);
     width: 320px !important;
     border-radius: 10px;
   } 
-  body{
-    background-color: black;
-    background-image: none;
-    background: rgb(22,21,21);
-    background: linear-gradient(180deg, rgba(22,21,21,0.9837184873949579) 0%, rgba(8,8,8,0.333858543417367) 48%, rgba(101,101,101,1) 98%);  
+
+  #logo{
+    margin: auto; 
+    display: flex;
+    justify-content: center;
+    font-family: montserrat, poppins;
+}
+
+.pinkhub{
+    font-size: 24px !important
+    }
+
+#logo h3{
+    font-size: 24px !important;
+} 
+body{
+  background-color: black;
+  background-image: none;
+  background: rgb(22,21,21);
+  background: linear-gradient(180deg, #ff90fdfb 0%, rgba(167, 167, 167, 0.334) 48%, #ff90e5 98%);  
 }
 
 body>img{

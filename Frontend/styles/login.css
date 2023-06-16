@@ -222,40 +222,33 @@ form{
         background-color: black;
         background-image: none;
         background: rgb(22,21,21);
-        background: linear-gradient(180deg, rgba(22,21,21,0.9837184873949579) 0%, rgba(8,8,8,0.333858543417367) 48%, rgba(101,101,101,1) 98%);  
+        background: linear-gradient(180deg, #ff90fdfb 0%, rgba(167, 167, 167, 0.334) 48%, #ff90e5 98%);  
     }
     
     #leftmaincont{
-        
-        color: white;
-        background: rgba(255,255,255,0.2);
         width:250px;
         margin: auto;
-        
-    }
-    #leftmaincont p{
-    
-        font-size: 13px;
     }
 
-    #logo h3{
-        font-size: 18px;
-    }
 
-    #logo img{
-        width: 1rem !important;
-    }
-    
+
     #logo{
         margin: auto; 
         display: flex;
         justify-content: center;
+        font-family: montserrat, poppins;
     }
 
-    #formcontainer p{
-        
-        font-size: 13px;
+    .pinkhub{
+        font-size: 24px !important
+        }
 
+    #logo h3{
+        font-size: 24px !important;
+    }    
+
+    #formcontainer p{
+        font-size: 13px;
     }
     #formcontainer input{
         font-size: 13px;
@@ -277,7 +270,6 @@ form{
 @media screen and (max-width:450px){
     #leftmaincont{
         color: white;
-        background: rgba(255,255,255,0.2);
         width:250px;
         margin-left: -10%;
     }
