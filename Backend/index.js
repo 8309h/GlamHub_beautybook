@@ -6,6 +6,7 @@ const cors = require("cors");
 let session = require("express-session");
 const { userRouter } = require("./routes/user.route");
 const { salonRouter } = require("./routes/admin.route");
+const { glamSalonRouter } = require("./routes/salon.route");
 
 let app = express();
 app.use(express.json());
@@ -36,6 +37,8 @@ app.get("/", (req, res) => {
 app.use("/user", userRouter);
 
 app.use("/admin", salonRouter);
+
+app.use("/salon", glamSalonRouter);
 
 app.listen(process.env.PORT, async () => {
   try {
