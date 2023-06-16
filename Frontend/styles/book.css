@@ -106,7 +106,7 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 300px;
+    width: 50%;
     background-color: #f1f1f1;
     padding: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -118,13 +118,14 @@ body{
   }
 
   .popup-content {
+    
     position: relative;
   }
 
   .close-btn {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: -25px;
+    right: 3px;
     cursor: pointer;
     font-size: 20px;
   }
@@ -152,3 +153,78 @@ body{
     border: 1px solid black;
     width: 75%;
  }
+
+ #scrollable-div {
+  width: 90%;
+  height: 400px;
+  overflow-y: scroll;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+#scrollable-div::-webkit-scrollbar {
+  width: 8px;
+}
+
+#scrollable-div::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+}
+
+#scrollable-div::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+/* 
+.salon-details {
+  background-color: #f5f5f5;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.salon-details:hover {
+  background-color: #e0e0e0;
+}
+
+.salon-details h2 {
+  margin-top: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.salon-details p {
+  margin: 5px 0;
+} */
+
+.hotel-details {
+  background-color: #f5f5f5;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 0px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hotel-details h2 {
+  margin-top: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.hotel-details p {
+  margin: 5px 0;
+}
+
+.hotel-details:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.hotel-divider {
+  height: 1px;
+  background-color: #ddd;
+  margin: 10px 0;
+}
