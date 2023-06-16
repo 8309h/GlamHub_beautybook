@@ -4,6 +4,7 @@ require("dotenv").config();
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
 const { userRouter } = require("./routes/user.route");
+const { salonRouter } = require("./routes/admin.route");
 
 let app = express();
 app.use(express.json());
@@ -32,6 +33,8 @@ app.get("/", (req, res) => {
 });
 
 app.use("/user", userRouter);
+
+app.use("/admin", salonRouter);
 
 app.listen(process.env.PORT, async () => {
   try {
