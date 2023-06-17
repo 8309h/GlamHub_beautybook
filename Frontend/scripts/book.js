@@ -7,8 +7,9 @@ window.addEventListener('DOMContentLoaded', function() {
     body.classList.add("bodydim")
     const maindiv = document.querySelector(".main-div")   
     maindiv.style.display='none';
-    fetchRenderInScrollBar()
+    
   });
+   fetchRenderInScrollBar()
    
   const centerName = document.getElementById("centerName")
 
@@ -44,57 +45,16 @@ window.addEventListener('DOMContentLoaded', function() {
   const scrollbarDiv = document.getElementById("scrollable-div")
   
   
-  function fetchRenderInScrollBar(){
+   function fetchRenderInScrollBar(){
 
-    fetch('https://mock-apai.onrender.com/toys')
-    .then(response => response.json())
-    .then(data => {
-      console.log(data)
-       // Render hotel details in the scrollable div
-       const scrollableDiv = document.getElementById('scrollable-div');
+   
 
-       data.forEach(hotel => {
-         const hotelId = hotel.id;
-         const hotelImage = hotel.image;
-         const hotelTitle = hotel.title;
-         const hotelRating = hotel.Rating;
-         const hotelPrice = hotel.price;
-         const hotelCategory = hotel.category;
- 
-         // Create a div element for the hotel details
-         const hotelDiv = document.createElement('div');
-         hotelDiv.classList.add('hotel-details');
- 
-         // Create and append elements for image, title, rating, price, and category
-        //  const imageElement = document.createElement('img');
-        //  imageElement.src = hotelImage;
-        //  hotelDiv.appendChild(imageElement);
- 
-         const titleElement = document.createElement('h2');
-         titleElement.textContent = hotelTitle;
-         hotelDiv.appendChild(titleElement);
- 
-         const ratingElement = document.createElement('p');
-         ratingElement.textContent = `Rating: ${hotelRating}`;
-         hotelDiv.appendChild(ratingElement);
- 
-         const priceElement = document.createElement('p');
-         priceElement.textContent = `Price: $${hotelPrice}`;
-         hotelDiv.appendChild(priceElement);
- 
-         const categoryElement = document.createElement('p');
-         categoryElement.textContent = `Category: ${hotelCategory}`;
-         hotelDiv.appendChild(categoryElement);
- 
-         // Append the hotel div to the scrollable div
-         scrollableDiv.appendChild(hotelDiv);
-       });
-     })
-     .catch(error => {
-       console.error('Error:', error);
-     });
-
-    //  fetch('https://api.example.com/salons')
+    //  fetch('http://localhost:4000/admin/salons',{
+    //   method: "POST", 
+    //   headers: {
+    //   "Content-Type": "application/json",
+    //     }
+    //  })
     //  .then(response => response.json())
     //  .then(data => {
     //    // Render salon details in the scrollable div
@@ -140,6 +100,20 @@ window.addEventListener('DOMContentLoaded', function() {
     //  .catch(error => {
     //    console.error('Error:', error);
     //  });
+    // fetch('localhost:4000/admin/salons', {
+    //   method: 'POST',
+    //   headers: {
+    //     'Content-Type': 'application/json'
+    //   }
+    //   })
+    //   .then(response => response.json())
+    //   .then(data => {
+    //     // Handle the response data here
+    //     console.log(data);
+    //   })
+    //   .catch(error => {
+    //     console.error('Error:', error);
+    //   });
   }
   
   
