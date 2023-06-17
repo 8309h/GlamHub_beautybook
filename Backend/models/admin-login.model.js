@@ -4,7 +4,7 @@ let adminLoginSchema = mongoose.Schema(
     {
     email: { type: String, required: true },
     password: { type: String , required:true },
-    key: { type:String , required:true }
+    key: { type:String}
   }
 );
 
