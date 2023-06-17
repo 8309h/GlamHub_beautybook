@@ -156,7 +156,7 @@ body{
  }
 
  #scrollable-div {
-  width: 90%;
+  width: 96.5%;
   height: 400px;
   overflow-y: scroll;
   border: 1px solid #ccc;
@@ -177,7 +177,7 @@ body{
   background-color: #555;
 }
 
-/* 
+
 .salon-details {
   background-color: #f5f5f5;
   padding: 10px;
@@ -199,33 +199,116 @@ body{
 
 .salon-details p {
   margin: 5px 0;
-} */
+}
 
-.hotel-details {
+
+
+
+
+.services-container {
+  /* Container styles */
+  width: 100%;
+  max-height: 400px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  
+  /* Scrollbar styles */
+  scrollbar-width: thin;
+  scrollbar-color: #888888 #f5f5f5;
+}
+
+/* Track */
+.services-container::-webkit-scrollbar-track {
+  background-color: #f5f5f5;
+}
+
+/* Handle */
+.services-container::-webkit-scrollbar-thumb {
+  background-color: #888888;
+}
+
+/* Handle on hover */
+.services-container::-webkit-scrollbar-thumb:hover {
+  background-color: #555555;
+}
+
+
+
+
+
+
+/* Style for the services container */
+#services-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Style for each service element */
+.service {
   background-color: #f5f5f5;
   padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 0px;
-  border: 1px solid #ddd;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  /* align-items: center; */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.hotel-details h2 {
-  margin-top: 0;
-  font-size: 18px;
+.service:hover {
+  background-color: #e0e0e0;
+}
+
+.service-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.service-name {
   font-weight: bold;
+  font-size: 21px;
+  color: #EB008B;
 }
 
-.hotel-details p {
-  margin: 5px 0;
+.service-desc {
+  margin-top: 5px;
+  margin-bottom: 10px;
 }
 
-.hotel-details:not(:last-child) {
-  margin-bottom: 20px;
+.service-info {
+  display: flex;
+  flex-direction: column; /* Updated to column direction */
+  align-items: flex-end;
 }
 
-.hotel-divider {
-  height: 1px;
-  background-color: #ddd;
-  margin: 10px 0;
+.service-price,
+.service-time {
+  font-style: italic;
+}
+
+
+
+.popup-content .search-bar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.popup-content .search-bar input[type="text"] {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 5px;
+}
+
+.popup-content .search-bar i {
+  margin-left: 5px;
+  color: #888;
+  cursor: pointer;
 }
