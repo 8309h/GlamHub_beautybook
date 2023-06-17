@@ -18,11 +18,11 @@ input{
 
   body{
     text-decoration: none;
-    color: #fff;
+    color: #000000;
     font-family: montserrat, poppins;
     margin: 0px;
     padding: 0px;
-    background-image: url(../assets/bg2.jpg);
+    background-image: url(../images/lfrs2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -41,24 +41,30 @@ body>img{
 .row {
 
   background: rgba(255,255,255,0.1);
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  color: #fff;
+  color: black;
   text-align: center;
   padding: 2em 2em 0.5em;
-  width: 350px !important;
+  width: 422px !important;
   margin: 3.5em	auto;
   border-radius: 5px;
-
+  border: 1px solid rgba(255,102,196,255);
+  margin-top: 50px;
+  background-color: white;
+  border: none;
 }
 
-  .row .form-group {
-    margin: 0.5em 0; }
+.row input{
+  padding-left: 5px !important;
+}
 
-    .row .form-group label {
-      display: block;
-      color: #fff;
-      text-align: left;
-      font-weight: 600; }
+form>p{
+text-align: left;
+font-weight: 600;
+margin-bottom: 5px;
+}
+
+
+
 
     .row .form-group input, .row .form-group button {
       display: block;
@@ -66,11 +72,12 @@ body>img{
       width: 100%;
       margin-top: 0.5em;
       margin-bottom: 0.5em;
-      /* background-color: inherit; */
-      border: none;
-      border-bottom: 1px solid #555;
-      color: #eee; 
-       border-radius: 10px; }
+      text-decoration: none;
+      border-radius: 5px;
+      background-color: white;
+      border-width: 1px;
+      margin-bottom: 2px;
+}
 
       .row .form-group input:focus, .row .form-group button:focus {
         background-color: #fff;
@@ -114,15 +121,29 @@ body>img{
           display: flex;
           align-items: center;
           justify-content: left;
-          margin-left: 5%;
+          /* margin-left: 5%; */
           font-size: 1.3rem;
-          margin-bottom: 5%;
+          /* margin-bottom: 5%; */
+          font-family: montserrat, poppins; 
+          height: 80px;
+          margin-top: -20px !important
       }
 
-      #logo h1{
-        font-size: 20px;
+      #logo img{
+        width:25%;
     }
 
+    .pinkhub{
+      color:rgba(255,102,196,255);
+      font-size: 29px !important
+  }
+  
+  #logo h3{
+      color:black;
+      font-size: 29px;
+      font-family: montserrat, poppins; 
+      text-align: left;
+  }
       /* logo end */
 
 
@@ -134,7 +155,7 @@ body>img{
         text-decoration: none;
         border-radius: 5px;
         font-family: montserrat;
-        background-color:#2C74B3;
+        background-color:rgba(255,102,196,255);
         border-width: 0px;
         margin-bottom: 30px;
         margin-top: 30px;
@@ -142,7 +163,7 @@ body>img{
         }
 
         #submitOTP:hover{
-          background-color: #144272;
+          background-color: #e631a0;
     color:rgb(255, 255, 255);
     cursor:pointer;
         }
@@ -155,7 +176,7 @@ body>img{
           text-decoration: none;
           border-radius: 5px;
           font-family: montserrat;
-          background-color:#2C74B3;
+          background-color:rgba(255,102,196,255);
           border-width: 0px;
           margin-bottom: 30px;
           margin-top: 10px;
@@ -163,14 +184,13 @@ body>img{
         }
 
         #submit:hover{
-          background-color: #144272;
+          background-color: #e631a0;
           color:rgb(255, 255, 255);
           cursor:pointer;
         }
 
 
-  .row .footer h5 {
-    margin-top: 1em; }
+
 
 
   .row .footer p {
@@ -187,23 +207,39 @@ body>img{
    color:#065EBE}
 
 
-.information-text {
-  color: #ddd; }
-
+   .information-text {
+    color:#e631a0;
+    font-size: 18px;
+    margin-top: 10px;
+  }
 
   @media screen and (max-width: 700px) {
     .row {
-      color: white;
-      background: rgba(255,255,255,0.2);
-      width: 300px !important;
+      width: 320px !important;
       border-radius: 10px;
     } 
+
+    #logo{
+      margin: auto; 
+      display: flex;
+      justify-content: center;
+      font-family: montserrat, poppins;
+  }
+  
+  .pinkhub{
+      font-size: 24px !important
+      }
+  
+  #logo h3{
+      font-size: 24px !important;
+  } 
+  
   body{
     background-color: black;
     background-image: none;
     background: rgb(22,21,21);
-    background: linear-gradient(180deg, rgba(22,21,21,0.9837184873949579) 0%, rgba(8,8,8,0.333858543417367) 48%, rgba(101,101,101,1) 98%);  
-}
+    background: linear-gradient(180deg, #ff90fdfb 0%, rgba(167, 167, 167, 0.334) 48%, #ff90e5 98%);  
+  }
   body>img{
       display: none;
   }

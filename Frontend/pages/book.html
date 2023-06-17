@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book an apointment</title>
+    <link rel="stylesheet" href="../styles/book.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <script src="../scripts/book.js"></script>
+</head>
+
+<body id="body">
+    <div id="popup" class="popup">
+        <div class="popup-content">
+          <span class="close-btn" onclick="closePopup()">X</span>
+          <h3>Select Center</h3>
+          <div id="scrollable-div">
+            <!-- Content goes here -->
+          </div>
+        </div>
+    </div>
+    <div class="main-div">
+
+        <div class="container">
+            <h1 class="heading">CENTER</h1>
+            <div id="centerSearch">
+                <p id="centerName"></p>
+                <p id="selectcenter" onclick="openPopup()">Select Center</p>
+            </div>
+
+            <h1 class="heading">SELECT A SERVICE</h1>
+            <div class="search-bar">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" class="search-input" placeholder="Search...">
+            </div>
+
+            <div class="menuAndList">
+                <div class="sidebar">
+                    <div class="option" onclick="toggleOption(this)">BODY SERVICE</div>
+                    <div class="option" onclick="toggleOption(this)">HAIR </div>
+                    <div class="option" onclick="toggleOption(this)">HAND &amp; FEET</div>
+                    <div class="option" onclick="toggleOption(this)">MAKEUP</div>
+                    <div class="option" onclick="toggleOption(this)">SKIN </div>
+                </div>
+
+                <div class="menulist">
+                    <p>Fetch and display the data</p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
+

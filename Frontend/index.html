@@ -6,12 +6,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>GLAMHUB</title>
+    <link rel="stylesheet" href="./styles/navbar.css"> 
+    <link rel="stylesheet" href="./styles/footer.css">
+    <link rel="stylesheet" href="./styles/index.css">
+    
     
 
 </head>
 <body>
-    <nav></nav>
+
+    <nav></nav> 
+
+
+    <div id="video-banner" style="margin-bottom: -7px; padding: 0; scroll-snap-align: start">
+        <video width="100%" height="auto" autoplay loop muted>
+          <source id="dskvideo" src="./assets/pexels-pavel-danilyuk-4178342-1920x1080-30fps.mp4" />
+          <source id="mobvideo" src="./assets/pexels-pavel-danilyuk-4178342-1920x1080-30fps.mp4" />
+        </video>
+      </div>
+
+      <div id="main">
+        <h2>RECOMMENDED SERVICES</h2>
+        <p>Our runway experts have curated some of the most popular services at Lakmé Salon, just for you. <br>
+            Take your pick and head to your nearest salon and get started on your makeover!</p>
+            <div id="services">
+                <div>
+                    <img src="./images/manicure.jpg" alt="">
+                    <h3>Manicure</h3>
+                </div>
+                <div>
+                    <img src="./images/Beauty_Sutra_Facial.png" alt="">
+                    <h3>Buety Sutra Facial</h3>
+                </div>
+               
+                <div>
+                    <img src="./images/bridal.jpg" alt="">
+                    <h3>Bridal Collection</h3>
+                </div>
+                <div>
+                    <img src="./images/hairspa.webp" alt="">
+                    <h3>Hair Spa</h3>
+                </div>
+                
+                <div>
+                    <img src="./images/glam-makeup.webp" alt="">
+                    <h3>Glam Makeup</h3>
+                </div>
+               
+            </div>
+      </div>
+      <div id="readmore">
+        <div id="readmore-one">
+            <p>WHAT’S TRENDING?
+                UFF TERI ADA LOOK</p>
+                <p>The Uff Teri Ada look from our Blockbuster Brides collection is designed for the coy bride whose excitement at her sangeet is palpable but measured. She is a vision of pure radiance as she prepares to embark on this new journey in her life.
+                </p>
+                <p>The shades of mint green that this stunning bride adorns befits her strong sense of individuality and independence.</p>
+                <p>Check out our complete Blockbuster Bridal Collection.</p>
+                <button style="color: white; background-color:  #eb008b;;padding: 2% 5%; border: none;">READ MORE</button>
+        </div>
+        <div id="bride-img"><img width="100%" src="./images/readmore.jpg" alt=""></div>
+      </div>
+
+
+    <footer></footer>
     
+
     
 </body>
 </html>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" ></script>
+<script>
+    $(function () {
+		    $("nav").load("pages/navbar.html");
+		});
+		$(function () {
+		    $("footer").load("pages/footer.html");
+		});
+</script>
