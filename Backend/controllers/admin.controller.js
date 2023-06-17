@@ -1,7 +1,7 @@
 const { SalonModel } = require("../models/salon.model");
 const { AdminLoginModel } = require("../models/admin-login.model");
-const bcrypt=require("bcrypt");
-const jwt=require("jsonwebtoken");
+const bcrypt = require("bcrypt");
+const jwt = require("jsonwebtoken");
 
 // Creating a new salon
 const registerNewSalon = async (req, res) => {
@@ -33,6 +33,7 @@ const registerNewSalon = async (req, res) => {
 
 //Reading all salons
 const getAllSalon = async (req, res) => {
+
   let { name } = req.body;
 
   try {
@@ -124,10 +125,10 @@ const loginAdmin = async (req, res) => {
     );
 
     // Storing tokens in cookies.
-    res.cookie("Admin_access_token", AdminAccessToken, { maxAge: 60 * 60 * 24 });
-    res.cookie("Admin_refresh_token", AdminRefreshToken, { maxAge: 60 * 60 * 24 * 4 });
+    res.cookie("Admin_access_token", AdminAccessToken, { maxAge: 60 * 60 * 24 * 1000, domain: "http://127.0.0.1:5500", path: "/pages" });
+    res.cookie("Admin_refresh_token", AdminRefreshToken, { maxAge: 60 * 60 * 24 * 4 * 1000, domain: "http://127.0.0.1:5500", path: "/pages" });
 
-    res.status(200).send({ msg: "Login success", AdminAccessToken , AdminRefreshToken });
+    res.status(200).send({ msg: "Login success", AdminAccessToken, AdminRefreshToken });
   } catch (error) {
     res.status(500).send({ msg: error.message });
   }
@@ -195,4 +196,4 @@ const newAdminAccessToken = async (req, res) => {
 };
 
 
-module.exports = { registerNewSalon, getAllSalon, updateSalonDetails, registerNewAdmin, loginAdmin ,logoutAdmin,newAdminAccessToken};
+module.exports = { registerNewSalon, getAllSalon, updateSalonDetails, registerNewAdmin, loginAdmin, logoutAdmin, newAdminAccessToken };

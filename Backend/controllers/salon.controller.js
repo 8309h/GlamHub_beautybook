@@ -67,5 +67,5 @@ const salonData = async (req, res) => {
 };
 
 module.exports = {
-  salonData,
+  salonData
 };
