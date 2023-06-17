@@ -16,9 +16,13 @@ footer{
     border-bottom: 1px solid gray;
     border-top: 1px solid gray;
     margin-bottom: 30px;
-    padding-top: 1%;
-    padding-bottom: 1%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
 
+}
+#footer-logo img {
+    width: 20%;
+    
 }
 #footer-one{
     display: flex;
