@@ -5,22 +5,23 @@ const cookieParser = require("cookie-parser");
 const cors = require("cors");
 const { userRouter } = require("./routes/user.route");
 const { salonRouter } = require("./routes/admin.route");
+const {auth}=require("./middlewares/auth")
 
 let app = express();
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors());
-// app.use(
-//   session({
-//     secret: "chess secret",
-//     resave: false,
-//     saveUninitialized: true,
-//     cookie: {
-//       secure: false,
-//       maxAge: 24 * 60 * 60 * 1000, // 24 hours
-//     },
-//   })
-// );
+app.use(
+  session({
+    secret: "chess secret",
+    resave: false,
+    saveUninitialized: true,
+    cookie: {
+      secure: false,
+      maxAge: 24 * 60 * 60 * 1000, // 24 hours
+    },
+  })
+);
 // app.use(express.static(path.join(__dirname,"../Frontend")))
 
 // // Basic endpoint
@@ -34,7 +35,7 @@ app.get("/", (req, res) => {
 
 app.use("/user", userRouter);
 
-app.use("/admin", salonRouter);
+app.use("/admin",salonRouter);
 
 app.listen(process.env.PORT, async () => {
   try {
