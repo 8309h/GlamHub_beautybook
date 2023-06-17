@@ -13,7 +13,7 @@ salonRouter.post("/refresh-token" , newAdminAccessToken);
 
 salonRouter.post("/register-salon" , registerNewSalon);
 
-salonRouter.post("/salons", authAdmin , getAllSalon);
+salonRouter.post("/salons",authAdmin, getAllSalon);
 
 salonRouter.post("/update-details" , updateSalonDetails)
 
