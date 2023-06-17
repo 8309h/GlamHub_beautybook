@@ -36,7 +36,7 @@ app.get("/", (req, res) => {
 
 app.use("/user", userRouter);
 
-app.use("/admin", salonRouter);
+app.use("/admin",salonRouter);
 
 app.use("/salon", glamSalonRouter);
 
