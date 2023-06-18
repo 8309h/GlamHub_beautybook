@@ -16,6 +16,8 @@
 
   #selected-salon img{
     width: 50%;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   }
 
   #selected-salon{
@@ -23,6 +25,9 @@
    background-color: aliceblue;
    margin: auto;
    padding: 10px;
+   border-radius: 5px;
+   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+   padding: 25px;
   }
 
 #ptagdiv{
@@ -37,6 +42,9 @@
     .wrapper {
       flex-wrap: wrap;
       flex-direction: column;
+    }
+    #container{
+      grid-template-columns: repeat(1, 1fr)
     }
   }
 
