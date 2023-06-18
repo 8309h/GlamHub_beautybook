@@ -23,8 +23,10 @@ loginBtn.addEventListener("click",async(e)=>{
     .then((res)=>res.json())
     .then((data)=>{
         console.log(data)
+        localStorage.setItem("admin_access_token",data.AdminAccessToken)
+        localStorage.setItem("refresh_access_token",data.AdminAccessToken)
         alert(data.msg)
-        window.location.href="../pages/admin.html"
+        window.location.href="admin.html"
     })
     .catch((err)=>alert("Login failed"))
 });
