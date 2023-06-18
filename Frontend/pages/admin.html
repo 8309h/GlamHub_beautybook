@@ -67,7 +67,11 @@
           <i class="bx bxs-data"></i>
           <span class="sideBtns">Retreive</span>
         </button>
-        <button id="updateBtn">
+        <button id="analysisBtn">
+          <i class='bx bxs-bar-chart-square' ></i>
+          <span class="sideBtns">Analysis</span>
+        </button>
+        <button id="logoutBtn">
           <i class="bx bxs-caret-up-circle"></i>
           <span class="sideBtns">Logout</span>
         </button>
@@ -114,6 +118,16 @@
           </form>
         </div>
       </div>
+
+      <div id="mylogoutModel" class="logoutModal">
+        <div class="logout-modal-content">
+            <h5>Do you want to logout?</h5>
+            <div>
+              <button id="logoutCancelBtn">Cancel</button>
+              <button id="logoutConfirmBtn">logout</button>
+            </div>
+        </div>
+      </div>
     </div>
   </body>
   <script src="../scripts/admin.js"></script>
@@ -122,4 +136,5 @@
     integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
     crossorigin="anonymous"
   ></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </html>
