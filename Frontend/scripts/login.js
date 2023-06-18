@@ -12,6 +12,7 @@ form.addEventListener("submit", (e) => {
       "content-type": "application/json",
     },
     body: JSON.stringify(payload),
+
   })
     .then((res) => res.json())
     .then((res) => {
@@ -37,6 +38,8 @@ form.addEventListener("submit", (e) => {
       }
     })
     .catch((err) => console.log(err));
+
+    console.log("payload",payload)
 });
 
 let googleBtn = document.getElementById("gbtn");
