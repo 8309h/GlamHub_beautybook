@@ -25,7 +25,7 @@ form.addEventListener("submit", (e) => {
           timer: 1500,
         });
         setTimeout(() => {
-          window.location.href = "lobby.html"; //----
+          window.location.href = "../index.html"; //----
         }, 2500);
       } else {
         Swal.fire({

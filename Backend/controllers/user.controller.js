@@ -170,7 +170,7 @@ const getotp = async (req, res) => {
   console.log(email);
   const msg = {
     to: email,
-    from: "aamirfarooqbhatt@gmail.com",
+    from: "glamhub842@gmail.com",
     subject: "Your OTP for Password Change",
     text: `Hi!, welcome to GLAMHUB!`,
     html: `<h2>Hello User</h2>
