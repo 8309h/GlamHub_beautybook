@@ -155,29 +155,22 @@ function showCategory(category) {
       <button class="service-book">Booknow</button>
     </div>
       `;
-<<<<<<< Updated upstream
-      serviceElement.addEventListener("click",()=>{
 
-       let  selectedServices={
-          name: service.name,
-          desc:  service.desc,
-          price:  service.price,
-          time: service.time,
-        }
+    serviceElement.addEventListener("click", () => {
+      let selectedServices = {
+        name: service.name,
+        desc: service.desc,
+        price: service.price,
+        time: service.time,
+      };
 
       const selectedServiceJson = JSON.stringify(selectedServices);
-      localStorage.setItem('selected_service', selectedServiceJson);
-
-      })
-      
-      servicesContainer.appendChild(serviceElement);
+      localStorage.setItem("selected_service", selectedServiceJson);
     });
-  }
-=======
+
     servicesContainer.appendChild(serviceElement);
   });
 }
->>>>>>> Stashed changes
 
 function handleSearch(name) {
   console.log(name);
