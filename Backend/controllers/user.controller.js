@@ -86,8 +86,10 @@ const loginUser = async (req, res) => {
     );
 
     // Storing tokens in cookies.
-    res.cookie("JAA_access_token", accessToken, { maxAge: 60 * 60 * 24 });
-    res.cookie("JAA_refresh_token", refreshToken, { maxAge: 60 * 60 * 24 * 4 });
+    res.cookie("JAA_access_token", accessToken, { maxAge: 60 * 60 * 24 * 100 });
+    res.cookie("JAA_refresh_token", refreshToken, {
+      maxAge: 60 * 60 * 24 * 4 * 100,
+    });
 
     res.status(200).send({ msg: "Login success", accessToken, refreshToken });
   } catch (error) {
@@ -168,7 +170,7 @@ const getotp = async (req, res) => {
   console.log(email);
   const msg = {
     to: email,
-    from: "raghavendradj842@gmail.com",
+    from: "aamirfarooqbhatt@gmail.com",
     subject: "Your OTP for Password Change",
     text: `Hi!, welcome to GLAMHUB!`,
     html: `<h2>Hello User</h2>
@@ -182,14 +184,6 @@ const getotp = async (req, res) => {
 
   try {
     await sgMail.send(msg);
-
-    // Swal.fire({
-    //   position: "centre",
-    //   icon: "success",
-    //   title: "OTP sent Successfully.",
-    //   showConfirmButton: false,
-    //   timer: 1500,
-    // });
 
     console.log("OTP sending successful");
     console.log("Received OTP value: ", otp);
