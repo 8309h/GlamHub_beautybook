@@ -170,6 +170,20 @@ window.addEventListener('DOMContentLoaded', function() {
       <div class="service-time">Time: ${service.time}</div>
     </div>
       `;
+      serviceElement.addEventListener("click",()=>{
+
+       let  selectedServices={
+          name: service.name,
+          desc:  service.desc,
+          price:  service.price,
+          time: service.time,
+        }
+
+      const selectedServiceJson = JSON.stringify(selectedServices);
+      localStorage.setItem('selected_service', selectedServiceJson);
+
+      })
+      
       servicesContainer.appendChild(serviceElement);
     });
   }
