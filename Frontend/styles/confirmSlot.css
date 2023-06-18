@@ -22,7 +22,7 @@ body{
     margin-top: 40px;
     margin-bottom: 35px;
     background-color: #F2F2F2;
-    padding: 0px 15px;
+    padding: 15px 15px;
 }
 
 .heading{
@@ -147,8 +147,16 @@ body{
 
  .menuAndList{
     display: flex;
-    justify-content: space-around;
-    margin-bottom: 15px;
+    flex-direction: column;
+    justify-content: center;
+ }
+
+ .menuAndList p{
+    margin-bottom: -5px;
+ }
+
+ #searchInput{
+    font-size: 18px;
  }
 
  .menulist{
@@ -313,3 +321,26 @@ body{
   color: #888;
   cursor: pointer;
 }
+
+.slottimes{
+   display: flex;
+   flex-wrap: wrap; 
+   gap: 3%;
+   margin-top: 2%;
+   
+}
+
+.slottimes button{
+    background-color: #f72ba2;
+    color: white;
+    border: none;
+    padding: 1% 2%;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.slottimes button:hover{
+    background-color:#EB008B;
+}
+

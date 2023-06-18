@@ -152,7 +152,6 @@ function showCategory(category) {
     <div class="service-info">
       <div class="service-price">Price: ${service.price}</div>
       <div class="service-time">Time: ${service.time}</div>
-      <button class="service-book">Booknow</button>
     </div>
       `;
 
@@ -166,6 +165,7 @@ function showCategory(category) {
 
       const selectedServiceJson = JSON.stringify(selectedServices);
       localStorage.setItem("selected_service", selectedServiceJson);
+      window.location.href = "../pages/confirmSlot.html";
     });
 
     servicesContainer.appendChild(serviceElement);
