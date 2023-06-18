@@ -14,16 +14,28 @@ body{
     
 } */
 
-.container{
-    
-   
+.container{   
     width: 85%;
     margin: auto;
-    margin-top: 40px;
+    margin-top: 5%;
     margin-bottom: 35px;
     background-color: #F2F2F2;
     padding: 0px 15px;
 }
+
+footer{
+  margin-top: 150px;
+}
+
+.container-fluid{
+  height: 0px;
+  
+}
+
+#img{
+  width: 25%;
+}
+
 
 .heading{
   padding:10px;
@@ -313,3 +325,4 @@ body{
   color: #888;
   cursor: pointer;
 }
+
