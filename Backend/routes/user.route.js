@@ -73,7 +73,12 @@ function token_Genretor(res, id) {
   // navigate to the "frontend/leaderboard" directory
   const targetDirectory = path.join(__dirname, "../../Frontend/index.html");
   res.set("Content-Type", "text/html");
+  // res.set("Content-Type", "stylesheet/css");
+
   res.sendFile(targetDirectory);
+
+
+  
 }
 
 module.exports = { userRouter };

@@ -1,7 +1,7 @@
 # dizzy-vase-3091  A Beauty Booking System
 
 > Project Code : dizzy-vase-3091<br/>
-> frontend Deployed link :     <br/>
+> frontend Deployed link :  https://648f51598dad3b5817d61aba--steady-sundae-a22a49.netlify.app/   <br/>
 > backend deployed link :    <br/>
 
 Dizzy Vase website is an online platform designed to connect beauty professionals with clients looking to book beauty-related sessions. The website offers a user-friendly interface that allows clients to search for services and book appointments with beauty professionals in their area.
@@ -25,7 +25,7 @@ Overall, a beauty booking system website provides a convenient and efficient way
  ## TechStack
  
  ### Client
- - HTML,CSS,JavaScripte,Bootstrap,jQuery
+ - HTML,CSS,JavaScript,Bootstrap,jQuery
  
  ### Sever 
  - Node.js, Express,
@@ -39,16 +39,11 @@ Overall, a beauty booking system website provides a convenient and efficient way
 
 
 ### Admin Route
-    - Get Professionals List(Method: GET): /admin/professionals
-    - Get professional by ID(Method: GET): /admin/?id
-    - Get Appointment List(Method: GET): /admin/appointments
-    - Get Appointment by ID(Method: GET): /admin/appointments?id=**
-    - Update Professional Info by ID(Method: PATCH): /admin/updateProfessional/:id
-    - Remove Professional Info by ID(Method: DELETE): /admin/removeProfessional/:id
+    - 
     
 ### Professional Authentication
-    - Professional Register: /professions/register
-    - Professional Login: /professions/login
+    - Admin Register: /professions/register
+    - Admin Login: /professions/login
 
 ### Professional Route
     - Get Professionals List(Method: GET): /professions/
