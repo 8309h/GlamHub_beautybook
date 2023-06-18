@@ -7,6 +7,7 @@ let session = require("express-session");
 const { userRouter } = require("./routes/user.route");
 const { salonRouter } = require("./routes/admin.route");
 const { glamSalonRouter } = require("./routes/salon.route");
+const {orderRouter}  = require("./routes/order.route")
 
 let app = express();
 app.use(express.json());
@@ -40,6 +41,7 @@ app.use("/user", userRouter);
 app.use("/admin",salonRouter);
 
 app.use("/salon", glamSalonRouter);
+app.use("/order",orderRouter)
 
 app.listen(process.env.PORT, async () => {
   try {

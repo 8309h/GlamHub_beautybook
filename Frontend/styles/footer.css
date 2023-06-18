@@ -16,12 +16,13 @@ footer{
     border-bottom: 1px solid gray;
     border-top: 1px solid gray;
     margin-bottom: 30px;
-    padding-top: 0.5%;
-    padding-bottom: 0.5%;
+    font-size: 22px;
+    /* padding-top: 0.5%;
+    padding-bottom: 0.5%; */
 
 }
 #footer-logo img {
-    width: 10%;
+    width: 7%;
     
 }
 #footer-one{

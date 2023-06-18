@@ -20,9 +20,9 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark" style="position: fixed; top: 0; padding: 4% 3%;">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark" style="position: fixed; top: 0; padding: 2% 2%;">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img src="./images/logo_glam.png" alt="" >GLAM <span style="color: #eb008b;">HUB</span></a>
+            <a class="navbar-brand" href="#"><img id="img-logo" src="./images/logo_glam.png" alt="" >GLAM <span style="color: #eb008b;">HUB</span></a>
                 <button id="navbar-toggler" class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -37,10 +37,10 @@
                             <a class="nav-link" href="./pages/book.html">BOOK APPOINTMENT</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./pages/admin.html">BECOME A PARTNER</a>
+                            <a class="nav-link" href="./pages/admin.login.html">BECOME A PARTNER</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Loginuser-name</a>
+                            <a class="nav-link" href="#"><span id="loggedname"></span></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="./pages/login.html">LOGIN</a>
@@ -63,11 +63,11 @@
                 <a class="nav-link" href="./pages/book.html">BOOK APPOINTMENT</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="./pages/admin.html">BECOME A PARTNER</a>
+                <a class="nav-link" href="#">BECOME A PARTNER</a>
             </li>
-            <!-- <li class="nav-item">
-                <a class="nav-link" href="#">Loginuser-name</a>
-            </li> -->
+            <li class="nav-item">
+                 <a class="nav-link" href="#"><span id="loggedname"></span></a>
+            </li>
             <li class="nav-item">
                 <a class="nav-link" href="./pages/login.html">LOGIN</a>
             </li>
@@ -130,7 +130,7 @@
         <div id="bride-img"><img width="100%" src="./images/readmore.jpg" alt=""></div>
     </div>
     <footer>
-        <div id="footer-logo"><img src="./images/logo_glam.png" alt="logo"></div>
+        <div id="footer-logo"><img id="img-logo" src="./images/logo_glam.png" alt="logo">GLAM <span style="color: #eb008b;">HUB</span></div>
        <div id="footer-one">
         <a href="../../Frontend/pages/aboutus.html">About Us</a>
         <a href="">Find Us</a>
@@ -183,6 +183,25 @@
             x.style.display = "none";
         }
     })
+
+
+
+    let name = document.getElementById("loggedname")
+
+    let localname = JSON.parse(localStorage.getItem("harshal"))
+    console.log("frontend",localname)
+
+     window.onload = () => {
+        if(localname) {
+            name.innerText = `Hello,${localname.namepas}`;
+
+        }else {
+            name.innerText = "user";
+        }
+
+     }
+
+    
 
 
 </script>

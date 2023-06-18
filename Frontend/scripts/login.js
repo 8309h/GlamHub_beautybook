@@ -16,6 +16,9 @@ form.addEventListener("submit", (e) => {
   })
     .then((res) => res.json())
     .then((res) => {
+
+      
+      localStorage.setItem("harshal", JSON.stringify(res));
       if (res.msg == "Login success") {
         Swal.fire({
           position: "centre",
@@ -47,3 +50,5 @@ let googleBtn = document.getElementById("gbtn");
 googleBtn.addEventListener("click", () => {
   // window.location.href="leaderboard.html"
 });
+
+

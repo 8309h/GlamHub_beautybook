@@ -62,6 +62,8 @@ const loginUser = async (req, res) => {
         .status(400)
         .send({ msg: "Not a existing user, please register" });
 
+        
+
     // Password verification
     const isPasswordCorrect = bcrypt.compareSync(
       password,
@@ -71,6 +73,7 @@ const loginUser = async (req, res) => {
     if (!isPasswordCorrect)
       return res.status(400).send({ msg: "Wrong credentials" });
 
+     
     // Generating access token
     const accessToken = jwt.sign(
       { userId: isUserPresent._id },
@@ -90,8 +93,9 @@ const loginUser = async (req, res) => {
     res.cookie("JAA_refresh_token", refreshToken, {
       maxAge: 60 * 60 * 24 * 4 * 100,
     });
-
-    res.status(200).send({ msg: "Login success", accessToken, refreshToken });
+     let emailpass = isUserPresent.email;
+     let namepas = isUserPresent.first_name;
+    res.status(200).send({ msg: "Login success", accessToken, refreshToken,emailpass,namepas});
   } catch (error) {
     res.status(500).send({ msg: error.message });
   }
@@ -170,7 +174,7 @@ const getotp = async (req, res) => {
   console.log(email);
   const msg = {
     to: email,
-    from: "glamhub842@gmail.com",
+    from: "harshalwagh201718@gmail.com",
     subject: "Your OTP for Password Change",
     text: `Hi!, welcome to GLAMHUB!`,
     html: `<h2>Hello User</h2>
