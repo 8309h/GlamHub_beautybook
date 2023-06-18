@@ -1,10 +1,17 @@
 let contentBox = document.querySelector(".display-content-box")
 let addBtn = document.getElementById("addBtn")
 let readBtn = document.getElementById("readBtn")
+let analysisBtn=document.getElementById("analysisBtn")
+let logoutScreen=document.getElementById("mylogoutModel")
+let logoutConfirmBtn=document.getElementById("logoutConfirmBtn")
+let logoutCancelBtn=document.getElementById("logoutCancelBtn")
 
 window.onload = () => {
     contentBox.innerHTML = ""
-    contentBox.innerHTML = `<h1>WELCOME TO GLAMGURU ADMINSIDE</h1>`;
+    contentBox.innerHTML = `
+    <img src="../images/logo_glam.png">
+    <h1>WELCOME TO GLAMHUB ADMIN-SIDE</h1>
+    `;
 }
 
 //Add form======================================================
@@ -219,12 +226,14 @@ readBtn.addEventListener("click", () => {
 async function getSalons() {
     const searchbox = document.getElementById("searchbox");
     const resultsBox = document.getElementById("resultsBox");
+    const admin_access_token=localStorage.getItem("admin_access_token")
 
     try {
         const response = await fetch("http://localhost:4000/admin/salons", {
             method: "POST",
             headers: {
-                "Content-Type": "application/json"
+                "Content-Type": "application/json",
+                Authorization:admin_access_token
             },
             body: JSON.stringify({ name: searchbox.value })
         });
@@ -234,9 +243,10 @@ async function getSalons() {
             console.log(data);
             Display(data, resultsBox);
         } else {
-            throw new Error("Request failed.");
+            throw new Error("i am here admin.js");
         }
     } catch (error) {
+
         alert(error);
     }
 }
@@ -335,4 +345,119 @@ window.onclick = function (event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
+    if (event.target == logoutScreen) {
+        logoutScreen.style.display = "none";
+    }
+}
+
+//Analysis button chartjs work here
+analysisBtn.addEventListener("click", () => {
+    contentBox.innerHTML = "";
+
+    contentBox.innerHTML = `
+        <div id="canvas_cantainer">
+            <div >
+                <button id="weeklySwitch">weekly</button>
+                <button id="monthlySwitch">monthly</button>
+            </div>
+            <canvas id="myChart"></canvas>
+        </div>
+    `;
+
+    let weeklySwitch = document.getElementById("weeklySwitch");
+    let monthlySwitch = document.getElementById("monthlySwitch");
+
+    weeklySwitch.addEventListener("click", weeklySwitchBtn);
+    monthlySwitch.addEventListener("click", monthlySwitchBtn);
+
+
+    let chart = null; // Variable to hold the chart instance
+
+    function weeklySwitchBtn() {
+        const chartData = {
+            labels: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+            datasets: [{
+                label: 'Weekly Revenue',
+                data: [12, 19, 3, 5, 2, 3, 44],
+                borderWidth: 1
+            }]
+        };
+
+        const chartOptions = {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        };
+
+        if (chart) {
+            chart.data = chartData;
+            chart.options = chartOptions;
+            chart.update(); // Update the chart
+        } else {
+            const canvas = document.getElementById('myChart');
+            chart = new Chart(canvas, {
+                type: 'line',
+                data: chartData,
+                options: chartOptions
+            });
+        }
+    }
+
+    function monthlySwitchBtn() {
+        const chartData = {
+            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul','Aug','Sep','Oct','Nov','Dec'],
+            datasets: [{
+                label: 'Monthly Revenue',
+                data: [12, 9, 5, 5, 5, 3, 4],
+                borderWidth: 1
+            }]
+        };
+
+        const chartOptions = {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        };
+
+        if (chart) {
+            chart.data = chartData;
+            chart.options = chartOptions;
+            chart.update(); // Update the chart
+        } else {
+            const canvas = document.getElementById('myChart');
+            chart = new Chart(canvas, {
+                type: 'line',
+                data: chartData,
+                options: chartOptions
+            });
+        }
+    }
+
+    weeklySwitchBtn();// calling for first time automatically
+});
+
+//for logout======================================================
+// this is to cancel form by clicking outside
+
+logoutBtn.addEventListener("click", () => {
+    logoutScreen.style.display = "flex";
+});
+
+// window.onclick = function (event) {
+//     if (event.target == logoutScreen) {
+//         logoutScreen.style.display = "none";
+//     }
+// }
+
+logoutCancelBtn.onclick = function (event) {
+        logoutScreen.style.display = "none";
+}
+
+logoutConfirmBtn.onclick=function(){
+    localStorage.clear()
+    window.location="admin.login.html"
 }
