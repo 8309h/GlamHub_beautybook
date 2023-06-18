@@ -32,6 +32,17 @@ let salonSchema = mongoose.Schema({
       },
     ],
   },
+  slots:{
+    "10:00":{type:Boolean,default:true},
+    "11:00":{type:Boolean,default:true},
+    "12:00":{type:Boolean,default:true},
+    "13:00":{type:Boolean,default:true},
+    "14:00":{type:Boolean,default:true},
+    "15:00":{type:Boolean,default:true},
+    "16:00":{type:Boolean,default:true},
+    "17:00":{type:Boolean,default:true},
+    "18:00":{type:Boolean,default:true}
+  }
 });
 
 let SalonModel = mongoose.model("salon", salonSchema);
