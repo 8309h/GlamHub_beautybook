@@ -115,23 +115,7 @@
     width: 60%;
 
 }
-#info {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    color: white;
-    margin-right: 5%;
-}
-#login {
-    background-color: black;
-    border: none;
-    color: white;
-}
-#signup {
-    background-color: black;
-    border: none;
-    color: white;
-}
+
 #nav2 {
     display: none;
     text-align: start;
@@ -160,7 +144,8 @@
     z-index: 1;
     display: flex;
     /* justify-content: space-between; */
-    height: 8%
+    height: 10%;
+    padding-bottom: 2%;
 
 }
 .navbar-nav {
@@ -189,8 +174,9 @@
     }
     #nav2 {
         position: fixed;
+        width: 100%;
         top: 10%;
-        flex-wrap: wrap;
+        /* flex-wrap: wrap; */
         height: auto;
     }
     #hamburger {

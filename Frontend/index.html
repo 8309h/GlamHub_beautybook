@@ -19,7 +19,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark" style="position: fixed; top: 0; padding: 3%;">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark" style="position: fixed; top: 0; padding: 4% 3%;">
         <div class="container-fluid">
             <a class="navbar-brand" href="#"><img src="./images/logo_glam.png" alt="" >GLAM <span style="color: #eb008b;">HUB</span></a>
                 <button id="navbar-toggler" class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -164,14 +164,7 @@
 
 </html>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-    // $(function () {
-    // 	    $("nav").load("pages/navbar.html");
-    // 	});
-    // $(function () {
-    //     $("footer").load("pages/footer.html");
-    // });
-</script>
+
 <script>
    
     let hamburger = document.querySelector(".navbar-toggler")
@@ -182,6 +175,9 @@
         let x = document.getElementById("nav2")
         if (x.style.display === "none") {
             x.style.display = "block";
+            x.style.backgroundColor="black"
+            x.style.color = "blue"
+
         } else {
             x.style.display = "none";
         }
