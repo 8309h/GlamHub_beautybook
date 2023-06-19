@@ -13,10 +13,7 @@ Overall, a beauty booking system website provides a convenient and efficient way
 ## Features
 
  - Authentication: The project includes JWT-based authentication to secure user data.
- - Authorization: The project includes role-based authorization to restrict access to certain routes or functionality.
- - Cross-platform compatibility: The project is designed to be compatible across multiple platforms and devices.
-
- - Hashing: User passwords are securely hashed to protect against unauthorized access.
+ - - Hashing: User passwords are securely hashed to protect against unauthorized access.
  - dotenv: The project uses dotenv to manage environment variables and sensitive configuration data.
  - Relationship: The project includes database schema relationships between collections to support complex data structures.
  - Aggregation: The project uses MongoDB's aggregation framework to perform advanced queries and data manipulations.
@@ -43,14 +40,18 @@ Overall, a beauty booking system website provides a convenient and efficient way
     
 ### User Authentication
     - Get Users List(Method: POST): /login/
+    - Get Users List(Method: POST): /register/
    
  ### User Route
-    - Get Users List(Method: POST): /register/
+  
     - Get Users List(Method: GET): /refresh-token/
     - Get Users List(Method: POST): /getotp/
     - Get Users List(Method: POST): /verifyotp/
     - Get Users List(Method: POST): /resetpassword/
     - Get Users List(Method: GET): /getsalon/
+    - Get Users List(Method: POST): /order/addorder
+    - Get Users List(Method: POST): /order/sendmail
+    
   
   
   
