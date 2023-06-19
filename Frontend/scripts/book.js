@@ -46,7 +46,7 @@ function closePopup() {
 const scrollbarDiv = document.getElementById("scrollable-div");
 
 function fetchRenderInScrollBar() {
-  fetch("http://localhost:4000/admin/salons", {
+  fetch("https://dull-teal-pelican-vest.cyclic.app/admin/salons", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -174,7 +174,7 @@ function showCategory(category) {
 
 function handleSearch(name) {
   console.log(name);
-  fetch("http://localhost:4000/admin/salons", {
+  fetch("https://dull-teal-pelican-vest.cyclic.app/admin/salons", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

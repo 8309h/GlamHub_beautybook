@@ -181,7 +181,7 @@ async function getSelectedValues(event) {
     };
 
     try {
-        await fetch(`http://localhost:4000/admin/register-salon`, {
+        await fetch(`https://dull-teal-pelican-vest.cyclic.app/admin/register-salon`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -229,7 +229,7 @@ async function getSalons() {
     const admin_access_token=localStorage.getItem("admin_access_token")
 
     try {
-        const response = await fetch("http://localhost:4000/admin/salons", {
+        const response = await fetch("https://dull-teal-pelican-vest.cyclic.app/admin/salons", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -320,7 +320,7 @@ async function updateSalon() {
     console.log(payload)
 
     try {
-        await fetch(`http://localhost:4000/admin/update-details`, {
+        await fetch(`https://dull-teal-pelican-vest.cyclic.app/admin/update-details`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

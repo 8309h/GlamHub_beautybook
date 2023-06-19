@@ -6,7 +6,7 @@ form2.addEventListener("submit", (e) => {
     email: document.getElementById("user_email").value,
   };
 
-  fetch("http://localhost:4000/user/getotp", {
+  fetch("https://dull-teal-pelican-vest.cyclic.app/user/getotp", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -46,7 +46,7 @@ form.addEventListener("submit", (e) => {
 
   console.log(payload.otp);
 
-  fetch("http://localhost:4000/user/verifyotp", {
+  fetch("https://dull-teal-pelican-vest.cyclic.app/user/verifyotp", {
     method: "POST",
     headers: {
       "Content-type": "application/json",

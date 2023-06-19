@@ -6,7 +6,7 @@ form.addEventListener("submit", (e) => {
     email: document.getElementById("email").value,
     password: document.getElementById("password").value,
   };
-  fetch(`http://localhost:4000/user/login`, {
+  fetch(`https://dull-teal-pelican-vest.cyclic.app/user/login`, {
     method: "POST",
     headers: {
       "content-type": "application/json",

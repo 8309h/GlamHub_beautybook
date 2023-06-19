@@ -177,7 +177,7 @@ function ordersavebackend() {
     email : useremail
   };
 
-  fetch(`http://localhost:4000/order/addorder`,{
+  fetch(`https://dull-teal-pelican-vest.cyclic.app/order/addorder`,{
     method: "POST",
     body: JSON.stringify(userObj),
     headers: {
@@ -194,7 +194,7 @@ function ordersavebackend() {
     });
 }
 function sendingOrderconformedemail(){
-  fetch("http://localhost:4000/order/sendmail", {
+  fetch("https://dull-teal-pelican-vest.cyclic.app/order/sendmail", {
   method: "POST",
   headers: {
     "Content-Type": "application/json",
