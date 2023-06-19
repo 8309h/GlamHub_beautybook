@@ -109,3 +109,34 @@ Overall, a beauty booking system website provides a convenient and efficient way
 -[Binod Okheda](https://github.com/BinodOkheda) 
 
 
+<h3>Landing Page</h3>
+  
+![index](https://github.com/aamirfarookh/ossified-nerve-3185/blob/main/Frontend/assets/index.png)
+  
+<h3>Login Page</h3>
+  
+![index.html](https://github.com/aamirfarookh/ossified-nerve-3185/blob/main/Frontend/assets/login.png)  
+  
+<h3>Register Page</h3>
+  
+![index.html](https://github.com/aamirfarookh/ossified-nerve-3185/blob/main/Frontend/assets/register.png)
+  
+<h3>Forgot Password</h3>
+  
+![index.html](https://github.com/aamirfarookh/ossified-nerve-3185/blob/main/Frontend/assets/forget.png) 
+  
+<h3>Reset Password</h3>
+  
+![index.html](https://github.com/aamirfarookh/ossified-nerve-3185/blob/main/Frontend/assets/reset.png)
+  
+<h3>Lobby</h3>
+  
+![index.html](https://github.com/aamirfarookh/ossified-nerve-3185/blob/main/Frontend/assets/lobby.png)  
+  
+<h3>Room</h3>
+  
+![index.html](https://github.com/aamirfarookh/ossified-nerve-3185/blob/main/Frontend/assets/room.png)  
+  
+<h3>Leader Board</h3>
+  
+![index.html](https://github.com/aamirfarookh/ossified-nerve-3185/blob/main/Frontend/assets/leader.png)  
