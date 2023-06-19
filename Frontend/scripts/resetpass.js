@@ -7,7 +7,7 @@ form2.addEventListener("submit", (e) => {
     password: document.getElementById("new_pass").value,
   };
 
-  fetch("http://localhost:4000/user/resetpassword", {
+  fetch("https://dull-teal-pelican-vest.cyclic.app/user/resetpassword", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

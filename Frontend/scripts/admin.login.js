@@ -40,7 +40,7 @@ signupBtn.addEventListener("click",async(e)=>{
         key:keyEl.value
     }
 
-    fetch("http://localhost:4000/admin/register",{
+    fetch("https://dull-teal-pelican-vest.cyclic.app/admin/register",{
         method:"POST",
         headers:{
             "Content-Type":"application/json"
