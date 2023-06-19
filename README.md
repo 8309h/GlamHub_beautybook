@@ -111,32 +111,26 @@ Overall, a beauty booking system website provides a convenient and efficient way
 
 <h3>Landing Page</h3>
   
-![index](https://github.com/aamirfarookh/ossified-nerve-3185/blob/main/Frontend/assets/index.png)
+![index](https://github.com/JRaghu842/Fashion-Geeks.com/blob/main/images/Glam_indexpage.png)
   
 <h3>Login Page</h3>
   
-![index.html](https://github.com/aamirfarookh/ossified-nerve-3185/blob/main/Frontend/assets/login.png)  
+![index.html](https://github.com/JRaghu842/Fashion-Geeks.com/blob/main/images/Glam_login.png)  
   
 <h3>Register Page</h3>
   
-![index.html](https://github.com/aamirfarookh/ossified-nerve-3185/blob/main/Frontend/assets/register.png)
+![index.html](https://github.com/JRaghu842/Fashion-Geeks.com/blob/main/images/Glam_register.png)
   
-<h3>Forgot Password</h3>
+<h3>Center</h3>
   
-![index.html](https://github.com/aamirfarookh/ossified-nerve-3185/blob/main/Frontend/assets/forget.png) 
+![index.html](https://github.com/JRaghu842/Fashion-Geeks.com/blob/main/images/Glam_booking.png)  
   
-<h3>Reset Password</h3>
+<h3>Slot Booking</h3>
   
-![index.html](https://github.com/aamirfarookh/ossified-nerve-3185/blob/main/Frontend/assets/reset.png)
+![index.html](https://github.com/JRaghu842/Fashion-Geeks.com/blob/main/images/Glam_slot_booking.png)  
   
-<h3>Lobby</h3>
+<h3>Confirm Booking and payment</h3>
   
-![index.html](https://github.com/aamirfarookh/ossified-nerve-3185/blob/main/Frontend/assets/lobby.png)  
-  
-<h3>Room</h3>
-  
-![index.html](https://github.com/aamirfarookh/ossified-nerve-3185/blob/main/Frontend/assets/room.png)  
-  
-<h3>Leader Board</h3>
-  
-![index.html](https://github.com/aamirfarookh/ossified-nerve-3185/blob/main/Frontend/assets/leader.png)  
+![index.html](https://github.com/JRaghu842/Fashion-Geeks.com/blob/main/images/Glam_confirm_booking.png)  
+
+
