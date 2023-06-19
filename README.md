@@ -35,38 +35,26 @@ Overall, a beauty booking system website provides a convenient and efficient way
 
 ### Admin Route
     -Register New Admin (method:POST) "admin/register"
-
     -Login Admin (method:POST)  "admin/login"
-
     -Admin Refresh Access Token (method:POST) "/refresh-token";
-
     -Register New Salon (method:POST) "admin/register-salon";
-
     -Get All Salons (method:POST) "admin/salons";
-
-Update Salon Details (method:POST) "/update-details";
+    -Update Salon Details (method:POST) "/update-details";
     
-### Professional Authentication
-    - Admin Register: /professions/register
-    - Admin Login: /login
-
-
 ### User Authentication
     - Get Users List(Method: POST): /login/
-    <!-- - Get Users List(Method: GET): /logout/ -->
+   
  ### User Route
     - Get Users List(Method: POST): /register/
     - Get Users List(Method: GET): /refresh-token/
     - Get Users List(Method: POST): /getotp/
     - Get Users List(Method: POST): /verifyotp/
     - Get Users List(Method: POST): /resetpassword/
-    <!-- - Get Appointments Slots(Method: GET): /users/availableSlots
-    - Get Booked Slots by Id(Method:PUT): /users/beautySlots/:id -->
-
-
-    
-    
-## Run Locally
+    - Get Users List(Method: GET): /getsalon/
+  
+  
+  
+  ## Run Locally
  ### Clone the project
      -https://github.com/8309h/dizzy-vase-3091 
 
@@ -83,14 +71,19 @@ Update Salon Details (method:POST) "/update-details";
 ## Environment Variables
  To run this project, you will need to add the following environment variables to your .env file
 
-      - Secret: secret key for jwt token
-      - sqlpass: password for MySql Database connection
-      - sqlusername: Username of MySql DB connection
+      -PORT = 4000
+      -MONGO_URL = MongoDb Database
+      -SENDGRID_KEY =To send mail while forget password and to receive mail after order confrom.
+      -JWT_ACCESS_TOKEN_SECRET_KEY =JWT tokens
+      -JWT_REFRESH_TOKEN_SECRET_KEY = Refresh token
+      -GOOGLE_CLIENT_ID = For Login with Google 
+      -GOOGLE_CLIENT_SECRET = For Login with Google 
+
 
 ## Contributors
--[Harshal Wagh](https://github.com/8309h)
--[Raghavendra Jingade](https://github.com/JRaghu842)
--[Pranay Mishra](https://github.com/THEPRANAYMISHRA)
--[Binod Okheda](https://github.com/BinodOkheda)
+-[Harshal Wagh](https://github.com/8309h) <br/>
+-[Raghavendra Jingade](https://github.com/JRaghu842) <br/>
+-[Pranay Mishra](https://github.com/THEPRANAYMISHRA) <br/>
+-[Binod Okheda](https://github.com/BinodOkheda) 
 
 
