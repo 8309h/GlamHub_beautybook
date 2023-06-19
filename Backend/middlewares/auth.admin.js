@@ -30,7 +30,7 @@ let authAdmin = async (req, res, next) => {
             if (err.message == "jwt expired") {
               try {
                 const token = await fetch(
-                  "http://localhost:4000/admin/refresh-token", //----
+                  "https://dull-teal-pelican-vest.cyclic.app/admin/refresh-token", //----
                   {
                     headers: {
                       "content-type": "application/json"

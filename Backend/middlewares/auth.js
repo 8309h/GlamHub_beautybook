@@ -24,7 +24,7 @@ let auth = async (req, res, next) => {
             if (err.message == "jwt expired") {
               try {
                 const token = await fetch(
-                  "http://localhost:4000/user/refresh-token", //----
+                  "https://dull-teal-pelican-vest.cyclic.app/user/refresh-token", //----
                   {
                     headers: {
                       "content-type": "application/json",
