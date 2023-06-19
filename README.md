@@ -1,7 +1,7 @@
 # dizzy-vase-3091  A Beauty Booking System
 
 > Project Code : dizzy-vase-3091<br/>
-> frontend Deployed link :  https://bookingglamhub.netlify.app/ <br/>
+> frontend Deployed link :  https://glambookingsys.netlify.app/ <br/>
 > backend deployed link :  https://dull-teal-pelican-vest.cyclic.app/  <br/>
 
 Dizzy Vase website is an online platform designed to connect beauty professionals with clients looking to book beauty-related sessions. The website offers a user-friendly interface that allows clients to search for services and book appointments with beauty professionals in their area.
@@ -33,26 +33,27 @@ Overall, a beauty booking system website provides a convenient and efficient way
  ### Database
  - MongoDB,LocalStorage,Redis
 
-
-## API Endpoints
-
-
-
 ### Admin Route
-    - 
+    -Register New Admin (method:POST) "admin/register"
+
+    -Login Admin (method:POST)  "admin/login"
+
+    -Admin Refresh Access Token (method:POST) "/refresh-token";
+
+    -Register New Salon (method:POST) "admin/register-salon";
+
+    -Get All Salons (method:POST) "admin/salons";
+
+Update Salon Details (method:POST) "/update-details";
     
 ### Professional Authentication
     - Admin Register: /professions/register
     - Admin Login: /login
 
-### Professional Route
-    - Get Professionals List(Method: GET): /professions/
-    - Get Booked Slots List(Method: GET): /professions/bookedSlots
-    - Create Booking Slots(Method: POST): /professions/createBeautySlots
 
 ### User Authentication
     - Get Users List(Method: POST): /login/
-    - Get Users List(Method: GET): /logout/
+    <!-- - Get Users List(Method: GET): /logout/ -->
  ### User Route
     - Get Users List(Method: POST): /register/
     - Get Users List(Method: GET): /refresh-token/
@@ -67,7 +68,8 @@ Overall, a beauty booking system website provides a convenient and efficient way
     
 ## Run Locally
  ### Clone the project
-     -https://github.com/8309h/dizzy-vase-3091   
+     -https://github.com/8309h/dizzy-vase-3091 
+
 ### Go to the project directory
     - cd dizzy-vase-3091
     
@@ -87,4 +89,8 @@ Overall, a beauty booking system website provides a convenient and efficient way
 
 ## Contributors
 -[Harshal Wagh](https://github.com/8309h)
--[]
+-[Raghavendra Jingade](https://github.com/JRaghu842)
+-[Pranay Mishra](https://github.com/THEPRANAYMISHRA)
+-[Binod Okheda](https://github.com/BinodOkheda)
+
+

@@ -13,7 +13,7 @@ loginBtn.addEventListener("click",async(e)=>{
         password:password.value
     }
 
-    fetch("http://localhost:4000/admin/login",{
+    fetch("https://dull-teal-pelican-vest.cyclic.app/admin/login",{
         method:"POST",
         headers:{
             "Content-Type":"application/json"
