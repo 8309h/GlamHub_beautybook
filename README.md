@@ -1,5 +1,5 @@
 # Logo 
-![index.html](https://github.com/JRaghu842/Fashion-Geeks.com/blob/main/images/GLAM%20HUB%20jpg.png)
+![index.html](https://github.com/JRaghu842/Fashion-Geeks.com/blob/main/images/GLAM%20HUB.png)
 # dizzy-vase-3091  A Beauty Booking System
 
 > Project Code : dizzy-vase-3091<br/>
